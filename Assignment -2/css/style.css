@@ -1,0 +1,296 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li, figure, figcaption, input, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the fonts and background for the body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* Style the header */
+header {
+    background-color: #567fa7;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    font-size: 50px;
+}
+
+header img {
+    margin-top: 15px;
+    height: 1em;
+    border-radius: 45%;
+}
+header h1{
+    margin: 5px;
+    color: #EADF7A;
+    font-size:25px;
+    font-weight: 700;
+    font-style: oblique;
+    padding: 10px;
+    border-style:double;
+    border-color: #1d1b1b;
+    background-color: #841e0a;
+    border-radius: 8px;
+   
+}
+
+ 
+header nav ul {
+    list-style: none;
+    display: flex;
+   
+
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Style the main content */
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start
+}
+
+main section {
+    width: 75%;
+
+}
+
+
+
+.allpizza {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.allpizza div {
+    flex: 0 0 50x;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    width: calc(30% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.allpizza div img {
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.allpizza div p {
+    margin: 10px 0;
+    
+}
+.pizzatilte{
+    font-weight: 700;
+    border-style:groove;
+    border-radius: 5px;
+}
+
+.allpizza div input[type="checkbox"],
+.allpizza div input[type="number"] {
+    margin: 7px 0;
+}
+
+.quantity {
+    display: flex;
+    justify-content: space-between;
+    width: 85% !important; 
+    height: 25px;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.quantity input[type="number"] {
+    width: 94px;
+    height: 35px;
+    text-align: center;
+    align-items: center;
+
+}
+
+.quantity-btn {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 30px;
+    width: 70px;
+}
+
+.quantity-btn:hover {
+    background-color: #c82333;
+}
+
+/* Style the aside section for toppings */
+main > section + section {
+    width: 25%;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+main > section +section > form > div > p {
+    font-weight: bold;
+}
+
+main > section > form > div {
+    margin-bottom: 20px;
+}
+
+    form {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      max-width: 100%;
+      margin: 10px auto;
+    }
+    
+    h2 {
+    
+      text-align: center;
+      font-size: 24px;
+      color: #f7f6f6;
+      background-color: #40a49f;
+      border-radius: 5px;
+    }
+    
+   
+
+.customer-info {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.customer-info p {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.customer-info input, .customer-info textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.customer-info input[type="submit"] {
+    background-color: #dc3545;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+}
+
+.customer-info input[type="submit"]:hover {
+    background-color: #c82333;
+}
+aside{
+        background-color: beige;
+    border-radius: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: bold;
+    height: 200px;
+    font-size: 15;
+}
+
+aside > article{
+    height: 100%;
+}
+ 
+aside>article> figure{
+    align-items: center;
+    height: 100%;
+
+}
+
+aside>article> figure > img{
+    height: 80%;
+    width: auto;
+    margin-top: 3px;
+}
+
+aside>article> figure > figcaption{
+    margin-left: 20px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    height: 100%;
+
+
+   
+}
+
+footer > div {
+    display: flex;
+    margin-right: 30px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: right;
+    flex:1;
+
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer h3 {
+    flex-grow: 1;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+footer p {
+    margin: 10px 0;
+}

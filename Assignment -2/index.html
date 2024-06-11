@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- all metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MY PIZZA Shop">
+    <meta name="robots" content="noindex, nofollow">
+    <title>FOOD HUNTSMAN</title>
+    <!--adding two fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css"><!--linking the css-->
+</head>
+<body>
+    <header><!-- header got a logo my shop name and a home link -->
+        <div>
+            <a href="index.html">
+                <img src="./img/logo.jpg" alt="logo">
+            </a>
+        </div>
+        <div>
+            <h1> FOOD HUNTSMAN </h1><!--this is shop name-->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+
+        <!--all pizza name details and asking for the quantity-->
+        <section class="allpizza">
+            <!-- Pepperoni Pizza -->
+            <div>
+                <p class="pizzatilte">Pepperoni Pizza</p><!--for pizza heading-->
+                <img src="./img/Pepperoni.png" alt="Pepperoni Pizza"><!--pizza image-->
+                <p>A favorite with savory pepperoni slices and melted mozzarella. Perfect for meat lovers.</p><!--pizza description-->
+                <p>$13.99  only (tax excluded)</p><!--pizza price-->
+                <div class="quantity"><!--two button to increase and decrease the ammount of the pizza-->
+                    <button type="button" class="quantity-btn" onclick="decreaseQuantity('PepperoniQty')">-</button>
+                    <input type="number" id="PepperoniQty" name="PepperoniQty" min="0" value="0">
+                    <button type="button" class="quantity-btn" onclick="increaseQuantity('PepperoniQty')">+</button>
+                </div>
+
+        <!--same goes for every pizza-->
+
+            </div>
+        
+            <!-- Margherita Pizza -->
+            <div>
+                <p class="pizzatilte">Margherita Pizza</p>
+                <img src="./img/Margherita.png" alt="Margherita Pizza">
+                <p>Classic delight with fresh tomatoes, mozzarella, and basil. A simple yet flavorful choice.</p>
+                <p>$8.99  only (tax excluded)</p>
+                <div class="quantity">
+                    <button type="button" class="quantity-btn" onclick="decreaseQuantity('MargheritaQty')">-</button>
+                    <input type="number" id="MargheritaQty" name="MargheritaQty" min="1" value="0">
+                    <button type="button" class="quantity-btn" onclick="increaseQuantity('MargheritaQty')">+</button>
+                </div>
+            </div>
+        
+            <!-- BBQ Chicken Pizza -->
+            <div>
+                <p class="pizzatilte">BBQ Chicken Pizza</p>
+                <img src="./img/BBQ_Chicken.png" alt="BBQ Chicken Pizza">
+                <p>Tangy BBQ sauce, grilled chicken, red onions, and cilantro. A smoky twist on a classic.</p>
+                <p>$14.99  only (tax excluded)</p>
+                <div class="quantity">
+                    <button type="button" class="quantity-btn" onclick="decreaseQuantity('BBQ_ChickenQty')">-</button>
+                    <input type="number" id="BBQ_ChickenQty" name="BBQ_ChickenQty" min="0" value="0">
+                    <button type="button" class="quantity-btn" onclick="increaseQuantity('BBQ_ChickenQty')">+</button>
+                </div>
+            </div>
+        
+            <!-- Hawaiian Pizza -->
+            <div>
+                <p class="pizzatilte">Hawaiian Pizza</p>
+                <img src="./img/Hawaiian.png" alt="Hawaiian Pizza">
+                <p>Juicy pineapple and ham over a bed of mozzarella. A sweet and savory combination.</p>
+                <p>$13.49 only (tax excluded)</p>
+                <div class="quantity">
+                    <button type="button" class="quantity-btn" onclick="decreaseQuantity('HawaiianQty')">-</button>
+                    <input type="number" id="HawaiianQty" name="HawaiianQty" min="0" value="0">
+                    <button type="button" class="quantity-btn" onclick="increaseQuantity('HawaiianQty')">+</button>
+                </div>
+            </div>
+        
+            <!-- Vegetarian Pizza -->
+            <div>
+                <p class="pizzatilte">Vegetarian Pizza</p>
+                <img src="./img/Vegetarian.png" alt="Vegetarian Pizza">
+                <p>Loaded with fresh vegetables like bell peppers, onions, and olives. A colorful and healthy option.</p>
+                <p>$12.49 only (tax excluded)</p>
+                <div class="quantity">
+                    <button type="button" class="quantity-btn" onclick="decreaseQuantity('VegetarianQty')">-</button>
+                    <input type="number" id="VegetarianQty" name="VegetarianQty" min="0" value="0">
+                    <button type="button" class="quantity-btn" onclick="increaseQuantity('VegetarianQty')">+</button>
+                </div>
+            </div>
+        
+            <!-- Meat Lovers Pizza -->
+            <div>
+                <p class="pizzatilte">Meat Lovers Pizza</p>
+                <img src="./img/Meat_Lovers.png" alt="Meat Lovers Pizza">
+                <p>Hearty portions of pepperoni, sausage, bacon, and ham. A carnivore’s dream come true.</p>
+                <p>$15.99 only (tax excluded)</p>
+                <div class="quantity">
+                    <button type="button" class="quantity-btn" onclick="decreaseQuantity('Meat_LoversQty')">-</button>
+                    <input type="number" id="Meat_LoversQty" name="Meat_LoversQty" min="0" value="0">
+                    <button type="button" class="quantity-btn" onclick="increaseQuantity('Meat_LoversQty')">+</button>
+                </div>
+            </div>
+        
+            <!-- Buffalo Chicken Pizza -->
+            <div>
+                <p class="pizzatilte">Buffalo Chicken Pizza</p>
+                <img src="./img/Buffalo.png" alt="Buffalo Chicken Pizza">
+                <p>Spicy buffalo sauce, grilled chicken, and a drizzle of ranch. A bold and zesty choice.</p>
+                <p>$14.49 only (tax excluded)</p>
+                <div class="quantity">
+                    <button type="button" class="quantity-btn" onclick="decreaseQuantity('Buffalo_ChickenQty')">-</button>
+                    <input type="number" id="Buffalo_ChickenQty" name="Buffalo_ChickenQty" min="0" value="0">
+                    <button type="button" class="quantity-btn" onclick="increaseQuantity('Buffalo_ChickenQty')">+</button>
+                </div>
+            </div>
+        
+            <!-- Supreme Pizza -->
+            <div>
+                <p class="pizzatilte">Supreme Pizza</p>
+                <img src="./img/Supreme.png" alt="Supreme Pizza">
+                <p>A medley of meats and veggies including pepperoni, sausage, peppers, and onions. The ultimate pizza experience.</p>
+                <p>$15.49 only (tax excluded)</p>
+                <div class="quantity">
+                    <button type="button" class="quantity-btn" onclick="decreaseQuantity('SupremeQty')">-</button>
+                    <input type="number" id="SupremeQty" name="SupremeQty" min="0" value="0">
+                    <button type="button" class="quantity-btn" onclick="increaseQuantity('SupremeQty')">+</button>
+                </div>
+            </div>
+        
+            <!-- Cheese Pizza -->
+            <div>
+                <p class="pizzatilte">Cheese Pizza</p>
+                <img src="./img/Cheese.png" alt="Cheese Pizza">
+                <p>Simply covered in rich, melted mozzarella cheese. A timeless classic for all ages.</p>
+                <p>$11.99 only (tax excluded)</p>
+                <div class="quantity">
+                    <button type="button" class="quantity-btn" onclick="decreaseQuantity('CheeseQty')">-</button>
+                    <input type="number" id="CheeseQty" name="CheeseQty" min="0" value="0">
+                    <button type="button" class="quantity-btn" onclick="increaseQuantity('CheeseQty')">+</button>
+                </div>
+            </div>
+        
+            <!-- Mushroom Pizza -->
+            <div>
+                <p class="pizzatilte">Mushroom Pizza</p>
+                <img src="./img/Mushroom.png" alt="Mushroom Pizza">
+                <p>Earthy mushrooms and gooey mozzarella on a crispy crust. A must-try for mushroom enthusiasts.</p>
+                <p>$12.99 only (tax excluded)</p>
+                <div class="quantity">
+                    <button type="button" class="quantity-btn" onclick="decreaseQuantity('MushroomQty')">-</button>
+                    <input type="number" id="MushroomQty" name="MushroomQty" min="0" value="0">
+                    <button type="button" class="quantity-btn" onclick="increaseQuantity('MushroomQty')">+</button>
+                </div>
+            </div>
+        </section>
+        <!-- topping section -->
+        <section>
+            <h2>Choose Your Preferances</h2><!--heading for preferances-->
+            <form action="somephpfile" method="post" enctype="multipart/form-data">
+
+            <div>
+                <p>Size</p><!--pizza size-->
+                <label class="size">
+                       <input type="radio" id="family" name="size" value="family">
+                    Family
+                </label>
+                <label class="size">
+                    <input type="radio" id="Large" name="size" value="Large">
+                    Large
+                </label>
+                <label class="size">
+                    <input type="radio" id="Medium" name="size" value="Medium">
+                    Medium
+                </label>
+                <label class="size">
+                    <input type="radio" id="Small" name="size" value="Small">
+                    Small
+                </label>
+            </div>
+
+            <div>
+                <p>Crust</p><!--pizza crust-->
+                <label class="Crust">
+                       <input type="radio" id="thik" name="topping" value="thik">
+                    Thik
+                </label>
+                <label class="Crust">
+                        <input type="radio" id="thin" name="topping" value="thin">
+                    Thin
+                </label>
+            </div>
+
+            <div>
+                <p>Crust</p><!--pizza crust-->
+                <label class="Crust">
+                       <input type="radio" id="thik" name="topping" value="thik">
+                    Thik
+                </label>
+                <label class="Crust">
+                        <input type="radio" id="thin" name="topping" value="thin">
+                    Thin
+                </label>
+            </div>
+            <div>
+                <p>Spicy Level</p><!--pizza spicy level-->
+                <label class="spicy">
+                    <input type="radio" id="Mild" name="topping" value="Mild">
+                Mild
+                </label>
+                <label class="spicy">
+                    <input type="radio" id="hot" name="topping" value="hot">
+                Hot
+                </label>
+                <label class="spicy">
+                    <input type="radio" id="blast" name="topping" value="blast">
+                    Blust
+                </label>
+            </div>
+            <div>
+                <p>Cheese</p><!--cheese quantity-->
+                <label class="cheese">
+                    <input type="radio" id="nocheese" name="topping" value="nocheese">
+                None
+                 </label>
+                 <label class="cheese">
+                    <input type="radio" id="mediumcheese" name="topping" value="mediumcheese">
+                Medium
+                 </label>
+                 <label class="cheese">
+                    <input type="radio" id="max" name="topping" value="max">
+                Max
+                 </label>
+            </div>
+               
+                <div class="customer-info"><!--customer information name email and masage-->
+                    <p><input type="text" placeholder="Full name" name="name"></p>
+                    <p><input type="email" placeholder="Your email" name="email"></p>
+                    <p><input type="text" placeholder="Address" name="address"></p>
+                    <p><textarea placeholder="Your Message"></textarea></p>
+                    <p><input type="submit" value="Order"></p>
+
+                </div>
+            </form>
+        </section>
+       
+        
+    </main>
+
+    <aside><!--here we have the top selling pizza descriptions-->
+        <article ><!--pizza 1-->
+            <figure >
+                <img src="./img/Pepperoni.png" alt="peparoni pizza">
+                <figcaption>Pepperoni Pizza</figcaption>
+            </figure>
+          
+        </article>
+        <p>Top selling PIZZA in this Month.</p>
+        <p>Top reviewed PIZZA in this Month.</p>
+        <article ><!--pizza 2-->
+            <figure >
+                <img src="./img/Cheese.png" alt="cheese pizza">
+                <figcaption>Cheese Pizza</figcaption>
+            </figure>
+            
+        </article>
+    </aside>
+   
+    <footer>
+        <div>
+            
+            <h3>About US</h3><!--this is the footer and i add some deccription about this shop i also add a home batton-->
+            <a href="index.html">HOME</a>
+        </div>
+            <p>Welcome to Food Huntsman, where our passion for crafting the perfect pizza meets the delight of our cherished customers. We pride ourselves on using the freshest ingredients and traditional recipes to bring you a taste of Italy right here at home. Our skilled chefs meticulously prepare each pizza with love, ensuring every bite is a savory journey. From our classic Margherita to our innovative gourmet creations, there's something for every pizza enthusiast. At Food Huntsman, we believe that great food brings people together, and we strive to create a warm, inviting atmosphere where you can enjoy memorable meals with family and friends. Join us for a culinary adventure that satisfies your cravings and leaves you coming back for more.</p>
+        
+    </footer>
+
+    <!--this section is for the quantity button i take help from the web for this button i wanted to use it because it look so cool withe the button-->
+    <script>
+        function increaseQuantity(id) {
+            var qty = document.getElementById(id);
+            qty.value = parseInt(qty.value) + 1;
+        }
+
+        function decreaseQuantity(id) {
+            var qty = document.getElementById(id);
+            if (qty.value > 1) {
+                qty.value = parseInt(qty.value) - 1;
+            }
+        }
+    </script>
+</body>
+</html>
